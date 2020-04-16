@@ -10,7 +10,7 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 const CheckoutPage = ({ cartItems, total }) => (
     <div className="checkout-page">
         <div className="checkout-header">
-            <div className="header-block">
+            <div className="headers-block">
                 <span className="">Product</span>
             </div>
             
@@ -31,7 +31,8 @@ const CheckoutPage = ({ cartItems, total }) => (
             </div>
        </div>
        {
-           cartItems.map( cartItem => <CheckoutItem key={cartItem.id} cartItem={cartItem}/>)
+           //cartItems.map( cartItem => (<CheckoutItem key={cartItem.id} cartItem={cartItem}/>))
+           cartItems.map(cartItem => <CheckoutItem key={cartItem.id} cartItem={cartItem} />)
        }
        <div className="total">
         <span>TOTAL: ${total}</span>
